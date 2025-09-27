@@ -1,0 +1,128 @@
+/*Reset styles*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body styles */
+body {
+    min-height: 100vh;
+    font-family: "Merriweather", serif;
+}
+
+.background {
+    background-image: url(images/image-from-rawpixel-id-5924419-o.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* navbar */
+nav {
+    background-color: rgba(255, 255, 255, 0.15);
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: auto;
+    max-width: 1100px;
+    padding: 0 20px;
+    z-index: 1001;
+    height: 60px;
+    gap: 10px;
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 25px;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+/* navbar hover effect */
+nav a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* navbar active link effect */
+nav a.active-link {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
+nav li:first-child {
+    margin: center;
+}
+
+/*mobile*/
+@media screen and (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(color);
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 2.5em;
+    }
+
+    nav a.active-link {
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/* hamburger menu*/
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.siderbar li {
+    width: 100%;
+}
+
+.siderbar a {
+    width: 100%;
+}
