@@ -12,7 +12,7 @@ body {
 }
 
 .background {
-    background-image: url(images/image-from-rawpixel-id-5924419-o.webp);
+    background-image: url("image-from-rawpixel-id-5924419-o.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -125,4 +125,5 @@ nav li:first-child {
 
 .siderbar a {
     width: 100%;
+
 }
